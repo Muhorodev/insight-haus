@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Upload, BarChart2, FileText } from "lucide-react";
 import { useAuth } from "@clerk/clerk-react";
 import { toast } from "sonner";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 const Dashboard = () => {
   const { userId } = useAuth();
@@ -47,7 +48,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="animate-fadeIn space-y-8">
+    <div className="animate-fadeIn space-y-8 p-6">
       <h1 className="text-4xl font-bold">Welcome to InsightHaus</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
