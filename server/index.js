@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const { ClerkExpressWithAuth } = require('@clerk/clerk-sdk-node');
+const analysisRoutes = require('./routes/analysis');
 
 const app = express();
 
@@ -15,6 +16,9 @@ mongoose.connect('mongodb://localhost:27017/analytics-platform', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
+// Routes
+app.use('/api/analysis', analysisRoutes);
 
 // User Activity Schema
 const UserActivitySchema = new mongoose.Schema({
