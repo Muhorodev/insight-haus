@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "setup-python": "pip install -r requirements.txt"
   },
   "dependencies": {
     "@clerk/clerk-sdk-node": "^4.8.7",
